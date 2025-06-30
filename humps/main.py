@@ -89,7 +89,7 @@ def kebabize(str_or_iter):
             string=_fix_abbreviations(s), separator="-"
         ).lower()
 
-    return UNDERSCORE_RE.sub(lambda m: "-" + m.group(0)[-1], s)
+    return UNDERSCORE_OR_SPACE_RE.sub(lambda m: "-" + m.group(0)[-1], s)
 
 
 def decamelize(str_or_iter):
